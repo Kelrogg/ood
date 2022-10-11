@@ -1,0 +1,119 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "strategy",
+					"jsonFile" : "directory-strategy-Debug-2460f2bf373932ce3e83.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "strategy",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				},
+				{
+					"build" : "strategy_functional",
+					"jsonFile" : "directory-strategy_functional-Debug-4348f72bbf7f5a5fcc5b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "strategy_functional",
+					"targetIndexes" : 
+					[
+						1,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "lab1",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "pch_strategy::@241ee8dc02c6c148167d",
+					"jsonFile" : "target-pch_strategy-Debug-33fccaa47e50986103d3.json",
+					"name" : "pch_strategy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "pch_strategy_func::@8fad352aa09dd8310177",
+					"jsonFile" : "target-pch_strategy_func-Debug-14d632dc0819eb2d78b5.json",
+					"name" : "pch_strategy_func",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "strategy::@241ee8dc02c6c148167d",
+					"jsonFile" : "target-strategy-Debug-1f6e5d0d300e8fb721ab.json",
+					"name" : "strategy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "strategy_functional::@8fad352aa09dd8310177",
+					"jsonFile" : "target-strategy_functional-Debug-ac84e3d1850650b91634.json",
+					"name" : "strategy_functional",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/kelrogg/CLionProjects/lab1/cmake-build-debug",
+		"source" : "/home/kelrogg/CLionProjects/lab1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

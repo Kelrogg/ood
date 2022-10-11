@@ -1,0 +1,10 @@
+/home/kelrogg/CLionProjects/lab1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kelrogg/CLionProjects/lab1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kelrogg/CLionProjects/lab1/cmake-build-debug/strategy/CMakeFiles/strategy.dir
+/home/kelrogg/CLionProjects/lab1/cmake-build-debug/strategy/CMakeFiles/pch_strategy.dir
+/home/kelrogg/CLionProjects/lab1/cmake-build-debug/strategy/CMakeFiles/edit_cache.dir
+/home/kelrogg/CLionProjects/lab1/cmake-build-debug/strategy/CMakeFiles/rebuild_cache.dir
+/home/kelrogg/CLionProjects/lab1/cmake-build-debug/strategy_functional/CMakeFiles/strategy_functional.dir
+/home/kelrogg/CLionProjects/lab1/cmake-build-debug/strategy_functional/CMakeFiles/pch_strategy_func.dir
+/home/kelrogg/CLionProjects/lab1/cmake-build-debug/strategy_functional/CMakeFiles/edit_cache.dir
+/home/kelrogg/CLionProjects/lab1/cmake-build-debug/strategy_functional/CMakeFiles/rebuild_cache.dir

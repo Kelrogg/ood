@@ -1,0 +1,21 @@
+#include "pch.h"
+
+#include "RubberDuck.h"
+
+#include "DanceNoWay.h"
+#include "FlyWithWings.h"
+#include "SwimNoWay.h"
+#include "SqueakBehavior.h"
+
+RubberDuck::RubberDuck()
+	: Duck(std::make_unique<DanceNoWay>(),
+		std::make_unique<FlyWithWings>(),
+		std::make_unique<SwimNoWay>(),
+		std::make_unique<SqueakBehavior>())
+{
+}
+
+void RubberDuck::Display() const
+{
+	std::cout << "I'm rubber duck" << '\n';
+}
