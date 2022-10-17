@@ -1,5 +1,5 @@
-#ifndef LAB3_PCH_H
-#define LAB3_PCH_H
+#ifndef TASK4_PCH_H
+#define TASK4_PCH_H
 
 #include <iostream>
 #include <vector>
@@ -10,5 +10,6 @@
 #include <set>
 #include <map>
 #include <functional>
+#include <memory>
 
 #endif

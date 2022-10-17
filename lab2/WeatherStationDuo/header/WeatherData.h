@@ -1,5 +1,5 @@
-﻿#ifndef LAB3_WEATHER_DATA_H
-#define LAB3_WEATHER_DATA_H
+﻿#ifndef TASK4_WEATHER_DATA_H
+#define TASK4_WEATHER_DATA_H
 
 #include "Observer.h"
 

@@ -1,5 +1,5 @@
-﻿#ifndef LAB3_OBSERVER_H
-#define LAB3_OBSERVER_H
+﻿#ifndef TASK4_OBSERVER_H
+#define TASK4_OBSERVER_H
 
 template <typename T>
 class IObservable;
@@ -8,7 +8,7 @@ template <typename T>
 class IObserver
 {
 public:
-	virtual void Update(T const& data) = 0;
+	virtual void Update(T const& data, IObservable<T> const& updateSource) = 0;
 	virtual ~IObserver() = default;
 };
 
@@ -45,7 +45,7 @@ public:
 
 		for (auto & [_, observer] : copy)
 		{
-			observer->Update(data);
+			observer->Update(data, *this);
 		}
 	}
 

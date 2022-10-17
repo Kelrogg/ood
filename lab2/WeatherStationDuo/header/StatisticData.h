@@ -1,5 +1,5 @@
-#ifndef LAB3_STATISTIC_DATA_H
-#define LAB3_STATISTIC_DATA_H
+#ifndef TASK4_STATISTIC_DATA_H
+#define TASK4_STATISTIC_DATA_H
 
 template <typename T>
 class CStatisticData

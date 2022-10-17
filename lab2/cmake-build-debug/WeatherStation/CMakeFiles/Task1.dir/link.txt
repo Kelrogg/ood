@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/Task1.dir/main.cpp.o CMakeFiles/Task1.dir/src/Display.cpp.o CMakeFiles/Task1.dir/src/StatsDisplay.cpp.o CMakeFiles/Task1.dir/src/WeatherData.cpp.o -o Task1 

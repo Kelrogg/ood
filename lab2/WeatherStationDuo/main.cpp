@@ -1,25 +1,28 @@
 #include "pch.h"
 
 #include "WeatherData.h"
-#include "Display.h"
+#include "DisplayDuo.h"
 #include "StatsDisplay.h"
 
 int main()
 {
-	CWeatherData wd;
+	CWeatherData homeStation;
+	CWeatherData streetStation;
 
-	CDisplay display;
-	wd.RegisterObserver(display);
+	CDisplayDuo display(homeStation, streetStation);
+    homeStation.RegisterObserver(display);
+    streetStation.RegisterObserver(display);
 
-	CStatsDisplay statsDisplay;
-	wd.RegisterObserver(statsDisplay, 1);
+	CStatsDisplay statsDisplay(homeStation, streetStation);
+	homeStation.RegisterObserver(statsDisplay, 1);
+	streetStation.RegisterObserver(statsDisplay, 1);
 
-	wd.SetMeasurements(3, 0.7, 760);
-	wd.SetMeasurements(4, 0.8, 761);
+	streetStation.SetMeasurements(3, 0.7, 760);
+	homeStation.SetMeasurements(4, 0.8, 761);
 
-	wd.RemoveObserver(statsDisplay);
+	homeStation.RemoveObserver(statsDisplay);
 
-	wd.SetMeasurements(10, 0.8, 761);
-	wd.SetMeasurements(-10, 0.8, 761);
+	streetStation.SetMeasurements(10, 0.8, 761);
+	homeStation.SetMeasurements(-10, 0.8, 761);
 	return 0;
 }

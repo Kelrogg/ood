@@ -2,20 +2,31 @@
 
 #include "../header/StatsDisplay.h"
 
-CStatsDisplay::CStatsDisplay()
-        : m_humidity()
-        , m_pressure()
-        , m_temperature()
+CStatsDisplay::CStatsDisplay(ObservableType const& streetStation, ObservableType const& homeStation)
+        : m_streetStation(std::addressof(streetStation))
+        , m_homeStation(std::addressof(homeStation))
 {
 }
 
-void CStatsDisplay::Update(const SWeatherInfo& data)
+void CStatsDisplay::Update(const SWeatherInfo& data, IObservable<SWeatherInfo> const& updateSource)
 {
-    m_temperature.Refresh(data.temperature);
-    m_pressure.Refresh(data.pressure);
-    m_humidity.Refresh(data.humidity);
+    Source place = (std::addressof(updateSource) == m_homeStation
+        ? Source::HOME
+        : std::addressof(updateSource) == m_streetStation
+        ? Source::STREET
+        : Source::UNKNOWN);
 
-    std::cout << "Temperature:\n" << m_temperature.ToString() <<
-                    "Pressure:\n" << m_pressure.ToString() <<
-                    "Humidity:\n" << m_humidity.ToString() << '\n';
+    m_statistics[place].m_temperature.Refresh(data.temperature);
+    m_statistics[place].m_pressure.Refresh(data.pressure);
+    m_statistics[place].m_humidity.Refresh(data.humidity);
+
+    std::cout << (place == Source::HOME
+        ? "Home station\n"
+        : place == Source::STREET
+        ? "Street station\n"
+        : "Unknown station\n");
+
+    std::cout << "Temperature:\n" << m_statistics[place].m_temperature.ToString() <<
+                    "Pressure:\n" << m_statistics[place].m_pressure.ToString() <<
+                    "Humidity:\n" << m_statistics[place].m_humidity.ToString() << '\n';
 }
