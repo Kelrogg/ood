@@ -1,0 +1,92 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "thirdparty",
+					"childIndexes" : 
+					[
+						2
+					],
+					"jsonFile" : "directory-thirdparty-Debug-ca18efa0333c95a683e3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "thirdparty"
+				},
+				{
+					"build" : "thirdparty/wxwidgets",
+					"jsonFile" : "directory-thirdparty.wxwidgets-Debug-6038dee2ff94f75ee71f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "thirdparty/wxwidgets"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "widgets",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "widgets_core::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-widgets_core-Debug-b96fd321f3e05fe46cfc.json",
+					"name" : "widgets_core",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/kelrogg/Projects/ood/lab4/build",
+		"source" : "/home/kelrogg/Projects/ood/lab4"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

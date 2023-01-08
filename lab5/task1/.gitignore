@@ -1,0 +1,13 @@
+## Images directory
+
+images/
+
+## Images
+
+*.jpg
+*.gif
+*.png
+
+## Documents
+
+*.html

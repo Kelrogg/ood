@@ -1,0 +1,101 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "task1",
+					"jsonFile" : "directory-task1-Debug-fe2c9cf9a02fc010b8bb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "task1",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "task2",
+					"jsonFile" : "directory-task2-Debug-ae614baf4ed9bb0ab913.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "task2",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "lab3",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Task1::@e4d0983e0b10c261a67f",
+					"jsonFile" : "target-Task1-Debug-052b089c4ad48958d00d.json",
+					"name" : "Task1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "Task2::@f6557a55164303c42d95",
+					"jsonFile" : "target-Task2-Debug-e93690db03c7ac8364a1.json",
+					"name" : "Task2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/kelrogg/Projects/ood/lab3/build",
+		"source" : "/home/kelrogg/Projects/ood/lab3"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
