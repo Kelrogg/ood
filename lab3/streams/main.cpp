@@ -1,46 +1,37 @@
-﻿#include <iostream>
-#include <string>
-#include <cstdint>
+#include "pch.hpp"
 
-using namespace std;
+#include "ArgumentsParser.hpp"
+#include "FileHandler.hpp"
 
-class IOutputDataStream
+int main(int argc, char* argv[])
 {
-public:
-	// Записывает в поток данных байт
-	// Выбрасывает исключение std::ios_base::failure в случае ошибки
-	virtual void WriteByte(uint8_t data) = 0;
+	auto program = ParseArgs(argc, argv);
 
-	// Записывает в поток блок данных размером size байт, 
-	// располагающийся по адресу srcData,
-	// В случае ошибки выбрасывает исключение std::ios_base::failure
-	virtual void WriteBlock(const void * srcData, std::streamsize size) = 0;
+	auto& inputFileName = program.get(INPUT_FILE_PAR);
+	auto& outputFileName = program.get(OUTPUT_FILE_PAR);
 
-	virtual ~IOutputDataStream() = default;
-};
+	auto decryptKeys = program.get<std::vector<unsigned char>>(DECRYPT_FLAG);
+	auto encryptKeys = program.get<std::vector<unsigned char>>(ENCRYPT_FLAG);
 
-class IInputDataStream
-{
-public:
-	// Возвращает признак достижения конца данных потока
-	// Выбрасывает исключение std::ios_base::failuer в случае ошибки
-	virtual bool IsEOF() const = 0;
+	bool shouldCompress = program.get<bool>(COMPRESS_FLAG);
+	bool shouldDeCompress = program.get<bool>(DECOMPRESS_FLAG);
 
-	// Считывает байт из потока. 
-	// Выбрасывает исключение std::ios_base::failure в случае ошибки
-	virtual uint8_t ReadByte() = 0;
+	try
+	{
+		auto inputFileHandler = FileReader(inputFileName, decryptKeys, shouldDeCompress);
+		auto outputFileHandler = FilePrinter(outputFileName, encryptKeys, shouldCompress);
 
-	// Считывает из потока блок данных размером size байт, записывая его в память
-	// по адресу dstBuffer
-	// Возвращает количество реально прочитанных байт. Выбрасывает исключение в случае ошибки
-	virtual std::streamsize ReadBlock(void * dstBuffer, std::streamsize size) = 0;
+		while (!inputFileHandler->IsEOF())
+		{
+			auto byte = inputFileHandler->ReadByte();
+			outputFileHandler->WriteByte(byte);
+		}
+	}
+	catch (std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+		std::exit(1);
+	}
 
-	virtual ~IInputDataStream() = default;
-};
-
-
-int main()
-{
-	
 	return 0;
 }
