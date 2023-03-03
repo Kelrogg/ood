@@ -1,8 +1,6 @@
 #ifndef FILEINPUTSTREAM_HPP
 #define FILEINPUTSTREAM_HPP
 
-#include <fstream>
-
 #include "InputStreamBase.hpp"
 
 class FileInputStream : public InputStreamBase

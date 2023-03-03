@@ -1,8 +1,6 @@
 #ifndef TRY_OPEN_FILE_HPP
 #define TRY_OPEN_FILE_HPP
 
-#include <fstream>
-
 template <typename StreamT, typename FileNameT>
 void TryOpenFile(StreamT& stream, std::ios_base::openmode mode, FileNameT&& fileName)
 {

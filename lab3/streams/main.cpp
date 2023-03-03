@@ -21,9 +21,11 @@ int main(int argc, char* argv[])
 		auto inputFileHandler = FileReader(inputFileName, decryptKeys, shouldDeCompress);
 		auto outputFileHandler = FilePrinter(outputFileName, encryptKeys, shouldCompress);
 
-		while (!inputFileHandler->IsEOF())
+		while (true)
 		{
 			auto byte = inputFileHandler->ReadByte();
+			if (inputFileHandler->IsEOF()) 
+			    break;
 			outputFileHandler->WriteByte(byte);
 		}
 	}

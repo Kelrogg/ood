@@ -1,10 +1,6 @@
 #ifndef IINPUTDATASTREAM_HPP
 #define IINPUTDATASTREAM_HPP
 
-#include <cstdint>
-#include <memory>
-#include <string>
-
 class IInputDataStream
 {
 public:

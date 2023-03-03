@@ -1,8 +1,6 @@
 #ifndef CREATE_FILE_HANDLER_HPP
 #define CREATE_FILE_HANDLER_HPP
 
-#include <vector>
-
 #include "FileInputStream.hpp"
 #include "FileOutputStream.hpp"
 

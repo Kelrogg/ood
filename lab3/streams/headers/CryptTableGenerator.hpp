@@ -27,7 +27,7 @@ std::vector<unsigned char> GenerateCryptTable(unsigned char key)
 		res = std::move(inverted);
 	}
 
-	res.shrink_to_fit();
+	//res.shrink_to_fit();
 
 	return res;
 }
