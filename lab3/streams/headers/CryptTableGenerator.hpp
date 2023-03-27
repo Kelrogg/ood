@@ -1,6 +1,8 @@
 #ifndef CRYPT_TABLE_GENERATOR_HPP
 #define CRYPT_TABLE_GENERATOR_HPP
 
+#include <random>
+
 enum class CryptMode
 {
 	ENCRYPT = 0,
