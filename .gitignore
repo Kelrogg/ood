@@ -1,3 +1,5 @@
 *cmake-build*/
 *.idea*/
 *build*/*
+
+lab9/node_modules/

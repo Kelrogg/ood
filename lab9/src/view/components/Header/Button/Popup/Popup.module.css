@@ -1,0 +1,8 @@
+.wrap {
+	position: absolute;
+	top: 50px;
+	width: min-content;
+	background-color: #cbaf87;
+	border: #30475e 1px solid;
+	border-radius: 2px;
+}
