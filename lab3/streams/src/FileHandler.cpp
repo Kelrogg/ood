@@ -14,15 +14,15 @@ IInputDataStreamPtr FileReader(const std::string& fileName, const std::vector<un
 {
 	IInputDataStreamPtr handler = std::make_unique<FileInputStream>(fileName);
 
+	for (auto& key : deCryptKeys)
+	{
+		handler = std::move((std::move(handler) << DecorateStream<InputStreamDeCrypter>(key)));
+	}
 	if (deCompress)
 	{
 		handler = std::move((std::move(handler) << DecorateStream<InputStreamRLEDeCompressor>()));
 	}
 
-	for (auto& key : deCryptKeys)
-	{
-		handler = std::move((std::move(handler) << DecorateStream<InputStreamDeCrypter>(key)));
-	}
 
 	return handler;
 }
