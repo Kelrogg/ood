@@ -14,7 +14,6 @@ type EditorType = IEditor & IObservable
 const editor: EditorType = new Editor()
 const controller: IController = new Controller(editor)
 
-
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
 );
@@ -28,7 +27,7 @@ function render()
 	);
 }
 
-const observer =  new Observer(render)
+const observer = new Observer(render)
 editor.RegisterObserver(observer)
 
 render()

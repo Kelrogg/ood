@@ -1,6 +1,5 @@
 {
 	"name": "shape-editor",
-	"homepage": "http://kazantsev-roman.github.io/shape-editor",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
